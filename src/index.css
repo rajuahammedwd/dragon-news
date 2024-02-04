@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background-div {
+  @apply bg-cover bg-center bg-no-repeat h-[400px];
+  background-image: url('../../../src/assets/bg.png');
+}
