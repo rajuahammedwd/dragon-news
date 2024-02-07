@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,4 +7,8 @@
 .background-div {
   @apply bg-cover bg-center bg-no-repeat h-[400px];
   background-image: url('../../../src/assets/bg.png');
+}
+body{
+  background-color: #F3F3F3;
+  font-family: 'Poppins', sans-serif;
 }
