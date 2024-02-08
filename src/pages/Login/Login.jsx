@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
+import { AuthContext } from "../../provider/AuthProvider";
+import { useContext } from "react";
 
 const Login = () => {
+  const { signInUser } = useContext(AuthContext);
       
     const handleLogin = (event) => {
         event.preventDefault()
         const form = event.target
         const email = form.email.value
         const password  = form.password.value
-        console.log(email,password)
+      signInUser(email, password)
+        .then(res => {
+          const loggedUser = res.user
+          console.log(loggedUser)
+      })
     }
   return (
     <div>
